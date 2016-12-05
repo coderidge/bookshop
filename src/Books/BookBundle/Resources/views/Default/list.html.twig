@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Document List</title>
+</head>
+<body>
+	<h1>Documents</h1>
+	
+                {%for books in list_books %}
+    
+                <p>Document {{loop.index}} Title: 
+                    {%for thelast in last_viewed %}
+                    {%if loop.last %} {%if thelast == books.title %} #JustViewed {%endif%}{%endif%} {%endfor%}{{books.title}} <a href="{{path('details',{'bookid':books.id})}}">More Info</a></p>
+	
+                   {%endfor%}
+	<a href="/">Return To The Home Page</a>
+</body>
+</html>

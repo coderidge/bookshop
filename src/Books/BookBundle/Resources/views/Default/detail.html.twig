@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Document Detail - {{list_details.title}}</title>
+</head>
+<body>
+   
+	<h1>[[Document {{list_details.id}} {{list_details.title}}]]</h1>
+	<h2>Information</h2>
+	<p>[[ {{list_details.description}}]]</p>
+	<p><a href="{{path('list')}}">No Thanks</a></p>
+
+	<p>
+           
+		Email Address: 
+                                <form method="post" action="{{path('buy')}}">
+                                <input type="hidden" name="book_id" value="{{list_details.id}}" />
+		<input type="text" name="email" />
+                                <button name="submit">Buy document/book</button>   
+                                </form>
+            
+	</p>
+</body>
+</html>

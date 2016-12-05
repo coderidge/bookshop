@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<h1>Home Page</h1>
+	<p>A Great Mr Men Documents Website</p>
+
+	{%if viewed is defined %}
+ 
+            <h1><b>Documents you have viewed:</b></h1>
+        
+                 {%for views in viewed%}
+	
+                 <p>{{views}}</p>
+                 
+                  {%endfor%}
+                  
+                  {%else%} 
+             
+                  <p>You haven't viewed any documents yet</p>
+                  
+                  {%endif%}
+         
+               {% if list_books is defined %}
+		
+                   <h1><b>You have just bought:</b></h1>
+		 
+                   {%for books in list_books %}
+    
+                <p>Title: {{books.title}}</p>
+	
+                   {%endfor%}   
+                 
+                <p>The full document will be sent to you shortly.</p>
+                {%endif%}
+	<a href="{{path('list')}}">View The Document List</a>
+</body>
+</html>

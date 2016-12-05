@@ -1,0 +1,17 @@
+books_book_homepage:
+    path:     /
+    defaults: { _controller: BooksBookBundle:Default:index }
+    
+details:
+    path: /details
+    defaults: { _controller: BooksBookBundle:Default:details }
+        
+list:
+    path: /list
+    defaults: { _controller: BooksBookBundle:Default:list }
+    
+buy:
+    path: /buy
+    defaults: { _controller: BooksBookBundle:Default:buy }
+    
+    
